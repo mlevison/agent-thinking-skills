@@ -95,6 +95,106 @@ graph LR
     note1[R: Growth Loop]
 ```
 
+#### Node/Variable Color Coding
+
+Apply color coding based on the variable's role in the system:
+
+**External Drivers** (light blue background, dark blue border):
+- Style: `fill:#e1f5ff,stroke:#01579b,stroke-width:2px`
+- Variables that initiate the system but aren't affected by it
+- Examples: LLM Usage, Pressure to Ship Faster
+
+**Negative Outcomes** (light red background, dark red border):
+- Style: `fill:#ffebee,stroke:#c62828,stroke-width:2px`
+- Undesirable end states or problem indicators
+- Examples: Hidden Defects, Technical Debt, Team Stress, Security Vulnerabilities, Change Failure Rate
+
+**Intermediate Variables** (light purple background, purple border):
+- Style: `fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px`
+- Variables that are both influenced by and influencing other variables
+- Examples: Code Volume, Cognitive Load, Developer Skill, Code Review Burden
+
+**Applying styles in Mermaid:**
+```mermaid
+graph LR
+    A([LLM Usage]) -->|+| B([Code Volume])
+    B -->|+| C([Hidden Defects])
+
+    style A fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    style B fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style C fill:#ffebee,stroke:#c62828,stroke-width:2px
+```
+
+**Classification guidance:** When assigning colors, ask:
+- Is this variable driven only by forces outside the diagram? → External Driver (blue)
+- Is this something the system produces that we want to reduce? → Negative Outcome (red)
+- Is this variable both caused by and causing other variables in the system? → Intermediate (purple)
+
+#### Arrow/Link Labeling
+
+**Polarity Indicators:**
+- `+` = Same direction (increase A → increase B, or decrease A → decrease B)
+- `-` = Opposite direction (increase A → decrease B, or decrease A → increase B)
+- Format: `-->|+|` or `-->|-|`
+
+**Contextual Annotations on Links:**
+Use when the mechanism between variables needs clarification. Add annotation text after the polarity indicator.
+- Format: `-->|+ annotation text|`
+- Examples:
+  - `-->|+ exhausts critical<br/>thinking capacity|`
+  - `-->|+ delay<br/>rework|`
+  - `-->|- reduces time for|`
+
+```mermaid
+graph LR
+    A([Cognitive Load]) -->|+ exhausts critical<br/>thinking capacity| B([Error Rate])
+    B -->|+ delay<br/>rework| C([Rework])
+    C -->|+ increases| A
+```
+
+#### Reinforcing Loop Identification
+
+Label reinforcing loops as **R1, R2, R3...** and balancing loops as **B1, B2, B3...**
+
+**Color/Style Suggestions for Multiple Loops:**
+- R1: Green/Dashed
+- R2: Red/Dotted
+- R3: Blue/Solid
+
+Note: Standard Mermaid doesn't support loop-level styling directly. Use Mermaid comments and an external legend to document which variables belong to each loop.
+
+#### Mermaid Comments for Loop Tracking
+
+Document each loop with a comment at the top of the Mermaid block:
+
+```mermaid
+%% R1: [Loop Name] - Variable1 → Variable2 → Variable3 → Variable1
+%% R2: [Loop Name] - Variable1 → Variable2 → Variable1
+graph LR
+    A([Variable1]) -->|+| B([Variable2])
+    B -->|+| C([Variable3])
+    C -->|+| A
+```
+
+This makes loops discoverable in the source even when the diagram is rendered visually.
+
+#### Delayed Effects Notation
+
+Some causal links don't produce immediate effects. Annotate delayed effects on the link:
+
+- Format: `-->|+ delay<br/>effect description|`
+- Example: Hidden Defects surface with delay as production incidents
+
+```mermaid
+graph LR
+    A([Hidden Defects]) -->|+ delay<br/>surface as incidents| B([Production Incidents])
+```
+
+Document significant delays in a **"Delayed Effects"** section below the diagram:
+- Which link has the delay
+- Approximate timeframe if known (days, sprints, months)
+- Why the delay matters for understanding the system
+
 ### 5. Tell the Story
 
 **Prompt user:** "Walk through the diagram and tell the story - what happens when [key variable] increases?"
@@ -150,13 +250,18 @@ graph LR
 
 **Claude:** "Interesting! So Error Rate increases Stress Level. That's also a (+) relationship. You've just identified a reinforcing loop - stress creates errors, errors create more stress. Let me draw that..."
 ```mermaid
+%% R1: Stress-Error Loop - Stress Level → Error Rate → Rework → Stress Level
 graph LR
-    A([Stress Level]) -->|increases| B([Error Rate])
-    B -->|increases| C([Rework])
-    C -->|increases| A
+    A([Stress Level]) -->|+| B([Error Rate])
+    B -->|+ delay<br/>rework| C([Rework])
+    C -->|+| A
+
+    style A fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style B fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
 ```
 
-**Claude:** "This is a reinforcing loop (R) - it amplifies itself. What might break this cycle?"
+**Claude:** "This is a reinforcing loop (R1: Stress-Error Loop) - it amplifies itself. Notice that Stress Level and Rework are intermediate variables (purple) — they're both caused by and cause other things. Error Rate is a negative outcome (red) — that's the thing we want to reduce. What might break this cycle?"
 
 ## Integration with Parent Skill
 When used as part of systems-thinking:
@@ -175,17 +280,25 @@ Always provide:
 
 **Example output:**
 ```mermaid
+%% R1: Growth Loop - Customer Satisfaction → Referrals → New Customers → Revenue → Service Investment → Customer Satisfaction
 graph LR
-    A([Customer Satisfaction]) -->|increases| B([Referrals])
-    B -->|increases| C([New Customers])
-    C -->|increases| D([Revenue])
-    D -->|increases| E([Service Investment])
-    E -->|increases| A
+    A([Customer Satisfaction]) -->|+| B([Referrals])
+    B -->|+| C([New Customers])
+    C -->|+| D([Revenue])
+    D -->|+| E([Service Investment])
+    E -->|+| A
+
+    style A fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style B fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+    style E fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
 ```
 
 **Key loops:**
 - **R1 (Growth Loop):** Customer Satisfaction → Referrals → New Customers → Revenue → Service Investment → Customer Satisfaction
   - This is a reinforcing loop that can drive exponential growth when satisfaction is high
+  - All variables are intermediate (purple) — each is both influenced by and influences others in the loop
 
 **Question:** "What might prevent this growth loop from continuing indefinitely? Where are the natural limits?"
 
@@ -200,6 +313,5 @@ Core principles drawn from:
 
 **Note for skill maintenance:** This skill can be extended with:
 - Stock-and-flow diagram capabilities
-- Delay notation (||) for time lags
 - Multiple linked loops for complex systems
 - Systems archetypes (Limits to Growth, Shifting the Burden, etc.)

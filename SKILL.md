@@ -4,7 +4,7 @@ description: Analyze problems using a Systems Thinking approach. Use when users 
 license: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
 metadata:
   author: agilepainrelief.com
-  version: '0.3'
+  version: '0.35'
 ---
 
 # Systems Thinking Analysis
