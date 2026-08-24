@@ -1,6 +1,6 @@
 ---
 name: causal-loop-diagrams
-description: Create Causal Loop Diagrams (CLDs) to visualize feedback loops and system dynamics. Use when users mention "feedback," "vicious/virtuous cycle," "reinforcing," "balancing," or want to map how variables influence each other over time.
+description: Create Causal Loop Diagrams (CLDs) to visualize feedback loops and system dynamics. Use when users mention "feedback", "vicious/virtuous cycle", "reinforcing", "balancing", or want to map how variables influence each other over time.
 ---
 
 # Causal Loop Diagram Creation
@@ -12,7 +12,7 @@ Guide users through creating Causal Loop Diagrams to visualize system feedback a
 Trigger this skill when users:
 - Want to visualize feedback loops or cycles
 - Describe situations where "A leads to B which leads back to A"
-- Use terms like "reinforcing," "balancing," "vicious cycle," "virtuous cycle"
+- Use terms like "reinforcing", "balancing", "vicious cycle", "virtuous cycle"
 - Need to understand how variables influence each other over time
 - Are exploring why problems persist or grow despite interventions
 
@@ -28,8 +28,8 @@ Trigger this skill when users:
   - ✅ "Team Morale" not ❌ "Bad Feelings"
   - ✅ "Trust" not ❌ "Distrust"
   - ✅ "Sales" not ❌ "Declining Sales"
-- Names should work with "level of," "amount of," or "size of"
-- Avoid direction indicators ("increasing," "high," "low")
+- Names should work with "level of", "amount of", or "size of"
+- Avoid direction indicators ("increasing", "high", "low")
 
 **Test question:** "Can this thing go both up AND down?"
 - If no → rephrase as something that can vary
