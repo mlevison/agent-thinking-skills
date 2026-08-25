@@ -9,13 +9,21 @@ In addition, these skills are intended to flag potential weaknesses that are inh
 | Skill | What it's for |
 | --- | --- |
 | [Systems Thinking](skills/systems-thinking/) | Problems that keep coming back. Traces causes upstream, finds the feedback loops holding a situation in place, and draws Causal Loop Diagrams when the picture would help. |
+| [Critical Thinking](skills/critical-thinking/) | Claims, conclusions and decisions that need testing before you act. Paul and Elder's eight Elements of Reasoning and nine Intellectual Standards, asked as questions - starting from wherever your thinking already is. Also interrogates GenAI output, which fails in its own particular ways. |
 
 ## Roadmap
-- **Critical Thinking** - a new skill, examining claims, evidence and reasoning before acting on them.
 - **Cynefin** - complexity/uncertainty classification, as an additional framework within Systems Thinking.
+- **Glossary** - domain vocabulary for the terms used across the skills, each linking to the APR glossary or a blog post for depth. For people reading the repo, not loaded at runtime.
+
+## A Note on Language
+These skills never have the model refer to itself as a person. It asks you to "provide an example", not to "give me an example". It doesn't say "I think" or "let me draw that".
+
+Using personal pronouns with GenAI models leads to errors where we falsely attribute human thinking to the model. A model that speaks as "I" invites you to treat it as a colleague who has weighed the evidence and formed a view. It hasn't, and it hasn't. The moment you forget that, you stop checking its work - which is the one thing these skills exist to keep you doing.
 
 ## Installing a Skill
-Each skill is a self-contained directory under `skills/`. Copy or upload the one you want:
+Copy-and-paste is a placeholder. Later versions will offer a proper installation method, so you won't have to move directories around by hand.
+
+Each skill is a self-contained directory under `skills/`. For now, copy or upload the one you want:
 
 - **Claude Code (project)** - copy the skill directory into `.claude/skills/` in your project
 - **Claude Code (personal)** - copy it into `~/.claude/skills/` to use it everywhere
@@ -39,6 +47,8 @@ skills/
 when it's actually needed.
 
 ## Updates
+2026-08-24 - Added the Critical Thinking skill.
+
 2026-08-24 - Renamed and restructured the repo from "systems-thinking" to "agent-thinking-skills" to allow for more skills.
 
 ## GenAI Usage
