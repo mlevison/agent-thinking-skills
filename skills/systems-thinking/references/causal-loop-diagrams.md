@@ -43,8 +43,8 @@ For each pair of related variables, ask:
 - **OPPOSITE direction (-):** "B decreases" OR "If A decreases, B increases"
 
 **Test by walking through:**
-- "So if we have MORE [A], we get MORE/LESS [B]?"
-- "And if we have LESS [A], we get LESS/MORE [B]?"
+- "So if there is MORE [A], does that mean MORE/LESS [B]?"
+- "And if there is LESS [A], does that mean LESS/MORE [B]?"
 
 ### 3. Identify Feedback Loops
 **Look for paths that circle back to where they started.**
@@ -127,7 +127,7 @@ graph LR
 
 **Classification guidance:** When assigning colors, ask:
 - Is this variable driven only by forces outside the diagram? → External Driver (blue)
-- Is this something the system produces that we want to reduce? → Negative Outcome (red)
+- Is this something the system produces that should be reduced? → Negative Outcome (red)
 - Is this variable both caused by and causing other variables in the system? → Intermediate (purple)
 
 #### Arrow/Link Labeling
@@ -213,7 +213,7 @@ Document significant delays in a **"Delayed Effects"** section below the diagram
 
 **Test understanding:**
 - "Does this capture what you're seeing?"
-- "What would happen if we doubled [variable X]?"
+- "What would happen if [variable X] doubled?"
 - "Which loop seems most powerful in this system?"
 
 **Iterate:**
@@ -232,11 +232,11 @@ Document significant delays in a **"Delayed Effects"** section below the diagram
 
 ## Example Dialogue Pattern
 
-**Claude:** "Let's map out the feedback loop you're describing. What are the main things that change over time in this situation?"
+**Claude:** "Mapping out the feedback loop you're describing. What are the main things that change over time in this situation?"
 
 **User:** "Well, when people are stressed they make more mistakes."
 
-**Claude:** "Good start. Let's name those as variables. Instead of 'stressed,' what if we called it 'Stress Level' - something that can go up or down? And for mistakes, maybe 'Error Rate'?"
+**Claude:** "Good start. Those need naming as variables. Instead of 'stressed,' what about 'Stress Level' - something that can go up or down? And for mistakes, maybe 'Error Rate'?"
 
 **User:** "That works."
 
@@ -248,7 +248,7 @@ Document significant delays in a **"Delayed Effects"** section below the diagram
 
 **User:** "Yeah, more errors means more rework, which creates more stress!"
 
-**Claude:** "Interesting! So Error Rate increases Stress Level. That's also a (+) relationship. You've just identified a reinforcing loop - stress creates errors, errors create more stress. Let me draw that..."
+**Claude:** "Interesting! So Error Rate increases Stress Level. That's also a (+) relationship. You've just identified a reinforcing loop - stress creates errors, errors create more stress. Here it is drawn out..."
 ```mermaid
 %% R1: Stress-Error Loop - Stress Level → Error Rate → Rework → Stress Level
 graph LR
@@ -261,7 +261,7 @@ graph LR
     style C fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
 ```
 
-**Claude:** "This is a reinforcing loop (R1: Stress-Error Loop) - it amplifies itself. Notice that Stress Level and Rework are intermediate variables (purple) — they're both caused by and cause other things. Error Rate is a negative outcome (red) — that's the thing we want to reduce. What might break this cycle?"
+**Claude:** "This is a reinforcing loop (R1: Stress-Error Loop) - it amplifies itself. Notice that Stress Level and Rework are intermediate variables (purple) - they're both caused by and cause other things. Error Rate is a negative outcome (red) - that's the thing to reduce. What might break this cycle?"
 
 ## Integration with Parent Skill
 When used as part of systems-thinking:
