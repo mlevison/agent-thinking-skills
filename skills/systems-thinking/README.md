@@ -80,6 +80,8 @@ Systems Thinking takes longer. It means admitting you don't fully understand the
 ## Installation
 See [Installing a Skill](../../README.md#installing-a-skill) in the repository README.
 
+In Claude Code, invoke it on demand with `/systems-thinking`, or let Claude reach for it when one of the trigger phrases turns up.
+
 ## License
 CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
 
