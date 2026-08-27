@@ -1,3 +1,5 @@
 .claude/
+.agents/
 /tmp/
 .DS_Store
+skills-lock.json
