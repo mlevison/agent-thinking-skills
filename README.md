@@ -12,6 +12,25 @@ In addition, these skills are intended to flag potential weaknesses that are inh
 | [Critical Thinking](skills/critical-thinking/) | Claims, conclusions and decisions that need testing before you act. Paul and Elder's eight Elements of Reasoning and nine Intellectual Standards, asked as questions - starting from wherever your thinking already is. |
 | [Critical Thinking for GenAI](skills/critical-thinking-genai/) | Text a model produced, where walking the author back through the reasoning doesn't work because there was no route. Eleven probes that test the output instead of asking the author. |
 
+## What Using Them Looks Like
+**Systems Thinking - a problem that keeps coming back**
+A team hits the same production incident every few months and someone says "this keeps happening".
+Systems Thinking zooms out from the incident to the larger system it sits in, works backward to
+causes outside the team's immediate control, and draws a Causal Loop Diagram once enough
+interconnected variables are on the table.
+
+**Critical Thinking - testing a decision before acting on it**
+The user lays out their reasoning and says "poke holes in this". Critical Thinking establishes
+whose reasoning is under examination, then asks one Paul and Elder question at a time, starting
+from the part the conclusion actually rests on rather than working through a checklist.
+
+**Critical Thinking for GenAI - checking something a model produced**
+The user pastes an answer from Claude or ChatGPT and asks "can I trust this?". The skill probes the
+output itself instead of asking the model to explain its reasoning, concentrates on where invented
+detail collects (anything niche, recent, local, or specific to the user's own scale, budget or
+jurisdiction), and closes by naming the claims that would collapse the answer if false, plus where
+to verify each one outside any model.
+
 ## Roadmap
 - **Cynefin** - complexity/uncertainty classification, as an additional framework within Systems Thinking.
 - **Glossary** - domain vocabulary for the terms used across the skills, each linking to the APR glossary or a blog post for depth. For people reading the repo, not loaded at runtime.
