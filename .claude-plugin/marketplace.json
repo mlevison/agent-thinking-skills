@@ -1,0 +1,32 @@
+{
+  "name": "agile-pain-relief",
+  "owner": {
+    "name": "Mark Levison",
+    "url": "https://agilepainrelief.com"
+  },
+  "description": "Skills that keep a person's own thinking in the loop when working with GenAI.",
+  "plugins": [
+    {
+      "name": "thinking-skills",
+      "source": "./",
+      "displayName": "Agent Thinking Skills",
+      "description": "Systems Thinking, Critical Thinking, and Critical Thinking for GenAI. Question-led skills that hand agency back to the person.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Mark Levison",
+        "url": "https://agilepainrelief.com"
+      },
+      "homepage": "https://github.com/mlevison/agent-thinking-skills",
+      "repository": "https://github.com/mlevison/agent-thinking-skills",
+      "license": "CC-BY-SA-4.0",
+      "keywords": [
+        "critical-thinking",
+        "systems-thinking",
+        "reasoning",
+        "evidence",
+        "facilitation"
+      ],
+      "category": "thinking"
+    }
+  ]
+}
