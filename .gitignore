@@ -1,3 +1,6 @@
 .claude/
+.agents/
+.claude-plugin/
 /tmp/
 .DS_Store
+skills-lock.json
