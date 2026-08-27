@@ -24,13 +24,45 @@ Using personal pronouns with GenAI models leads to errors where we falsely attri
 The same rule governs the instructions inside each `SKILL.md`. They say what **the assistant** should do rather than addressing it as "you", so nothing in the text implies there is someone in there being spoken to.
 
 ## Installing a Skill
-Copy-and-paste is a placeholder. Later versions will offer a proper installation method, so you won't have to move directories around by hand.
+Three routes. The first two update themselves; the third doesn't.
 
-Each skill is a self-contained directory under `skills/`. For now, copy or upload the one you want:
+### npx skills
+Works with Claude Code, Codex, Cursor, OpenCode and around thirty other agents. The registry is
+[skills.sh](https://skills.sh); this repository is the package.
 
-- **Claude Code (project)** - copy the skill directory into `.claude/skills/` in your project
-- **Claude Code (personal)** - copy it into `~/.claude/skills/` to use it everywhere
-- **Claude apps** - zip the skill directory and upload it
+```bash
+npx skills add mlevison/agent-thinking-skills                       # asks where to put them, offers all three
+npx skills add mlevison/agent-thinking-skills -g                    # personal, so every project has them
+npx skills add mlevison/agent-thinking-skills -s critical-thinking  # one skill only
+npx skills update                                                   # pull later versions
+```
+
+The CLI reports anonymous install counts by default; `DO_NOT_TRACK=1` turns that off.
+
+### Claude Code plugin
+Installs all three at once and keeps them current through `/plugin update`.
+
+```
+/plugin marketplace add mlevison/agent-thinking-skills
+/plugin install thinking-skills@agile-pain-relief
+```
+
+The first line registers the catalogue and installs nothing. The second does the installing.
+`agile-pain-relief` is the marketplace name rather than the repository name, so the two
+deliberately differ.
+
+To remove: `/plugin uninstall thinking-skills@agile-pain-relief`.
+
+### By hand
+Each skill is a self-contained directory under `skills/`. Copy the whole thing, `references/` and
+all, or the skill won't load:
+
+- **Claude Code (project)** - into `.claude/skills/`, committed
+- **Claude Code (personal)** - into `~/.claude/skills/`, for every project
+- **Claude apps** - zip the directory and upload it
+
+Symlinking a clone instead of copying makes `git pull` the update:
+`ln -s "$PWD/skills/critical-thinking" ~/.claude/skills/critical-thinking`.
 
 Anthropic's guide: https://support.claude.com/en/articles/12512180-using-skills-in-claude
 
@@ -40,30 +72,31 @@ Two ways, and you get both by default:
 - **Type the slash command** - `/critical-thinking`, `/systems-thinking`, `/critical-thinking-genai`. In Claude Code a skill directory named `x` creates `/x`, so the directory name is the command.
 - **Say something that matches** - each skill lists its trigger phrases, and Claude reaches for the skill when one turns up.
 
-Keep the directory intact when you copy it. Each `SKILL.md` loads files from its own
-`references/` folder, and the skill won't work without them.
+Installed as a plugin, each skill also answers to a namespaced command,
+`/thinking-skills:critical-thinking`, which is what to type if something else on the machine has
+already claimed the short name.
 
 ## Repository Layout
 ```
+.claude-plugin/
+  marketplace.json  # the catalogue /plugin marketplace add reads
+  plugin.json       # this repo as a single plugin
 skills/
   <skill-name>/
-    SKILL.md      # frontmatter + workflow; what Claude loads
-    README.md     # the human-facing explanation
-    references/   # frameworks and detail, loaded on demand
+    SKILL.md        # frontmatter + workflow; what Claude loads
+    README.md       # the human-facing explanation
+    references/     # frameworks and detail, loaded on demand
 ```
 
 `SKILL.md` stays short on purpose. Anything long lives in `references/` so it's only read
 when it's actually needed.
 
 ## Updates
-2026-08-26 - Split Critical Thinking for GenAI out of Critical Thinking into a skill you can invoke on its own.
-
-2026-08-24 - Added the Critical Thinking skill.
-
-2026-08-24 - Renamed and restructured the repo from "systems-thinking" to "agent-thinking-skills" to allow for more skills.
+- 2026-08-26 - Split Critical Thinking for GenAI out of Critical Thinking into a skill you can invoke on its own.
+- 2026-08-24 - Added the Critical Thinking skill. Renamed and restructured the repo from "systems-thinking" to "agent-thinking-skills" to allow for more skills.
 
 ## GenAI Usage
-Claude is used to help me author the skills themselves and write the installation instructions.
+Claude is used to help me desgin the skills themselves and write the installation instructions. The core content remains human authored. *To the extent that Mark Levison remains human.*
 
 ## License
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - full text in [LICENSE](LICENSE).

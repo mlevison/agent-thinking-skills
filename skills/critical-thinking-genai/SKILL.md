@@ -1,6 +1,6 @@
 ---
 name: critical-thinking-genai
-description: Interrogate text a model produced. Critical Thinking assumes a person reached a conclusion and can be walked back through how they got there, and on an LLM there was no route to walk back, so these eleven probes test the output instead of asking the author. Use when the user says "is this AI answer any good", "did it make this up", "check what ChatGPT told me", "can I trust this", "verify this AI output", "hallucination", or pastes model output they are about to rely on. Also use when an answer earlier in this conversation turns out to be wrong, before correcting it in place.
+description: Interrogate model-generated text with eleven probes that test the output itself, because there is no author to walk back through the reasoning. Use when the user says "is this AI answer any good", "did it make this up", "check what ChatGPT told me", "can I trust this", "verify this AI output", "hallucination", or pastes model output they are about to rely on. Also use when an answer earlier in this conversation turns out to be wrong, before correcting it in place.
 license: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
 metadata:
   author: agilepainrelief.com

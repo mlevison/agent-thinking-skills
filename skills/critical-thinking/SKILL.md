@@ -1,6 +1,6 @@
 ---
 name: critical-thinking
-description: Examine reasoning, claims and evidence using Paul and Elder's Elements of Reasoning and Intellectual Standards. Establishes whose reasoning is under examination, then asks one question at a time. Use when the user says "critical thinking", "check my reasoning", "poke holes in this", "is this a good argument", "am I missing something", "how do I know this is true", or wants a claim, decision or conclusion stress-tested before acting on it. Where the text under examination came out of a model, hand off to the Critical Thinking for GenAI skill.
+description: Stress-test a claim, decision or conclusion one question at a time, using Paul and Elder's Elements of Reasoning and Intellectual Standards. Use when the user says "critical thinking", "check my reasoning", "poke holes in this", "is this a good argument", "am I missing something", "how do I know this is true", or wants their thinking tested before acting on it. If the text came out of a model, hand off to critical-thinking-genai.
 license: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/
 metadata:
   author: agilepainrelief.com
