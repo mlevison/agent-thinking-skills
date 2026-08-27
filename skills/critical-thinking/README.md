@@ -89,6 +89,6 @@ In Claude Code, invoke it on demand with `/critical-thinking`, or let Claude rea
 The Elements of Reasoning and the Universal Intellectual Standards are the work of Richard Paul and Linda Elder at the [Foundation for Critical Thinking](https://www.criticalthinking.org). The questions here are one way of putting their framework to work in conversation.
 
 ## License
-CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - attribution terms in the [repository README](../../README.md#license).
 
 Created by [Agile Pain Relief](https://agilepainrelief.com)

@@ -83,6 +83,6 @@ See [Installing a Skill](../../README.md#installing-a-skill) in the repository R
 In Claude Code, invoke it on demand with `/systems-thinking`, or let Claude reach for it when one of the trigger phrases turns up.
 
 ## License
-CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - attribution terms in the [repository README](../../README.md#license).
 
 Created by [Agile Pain Relief](https://agilepainrelief.com)

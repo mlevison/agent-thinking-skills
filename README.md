@@ -66,6 +66,16 @@ when it's actually needed.
 Claude is used to help me author the skills themselves and write the installation instructions.
 
 ## License
-CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - full text in [LICENSE](LICENSE).
+
+Copy, adapt and build on these skills, commercially or otherwise. Two conditions: keep the
+attribution, and put the same licence on what you build.
+
+That holds for derivative work assembled by a GenAI agent from these files exactly as it holds
+for work assembled by hand. The obligation sits with whoever directed the agent. Keep this line:
+
+> Mark Levison, [Agile Pain Relief](https://agilepainrelief.com) - [github.com/mlevison/agent-thinking-skills](https://github.com/mlevison/agent-thinking-skills)
+
+[ATTRIBUTION.md](ATTRIBUTION.md) says the same thing in a form an agent can parse.
 
 Created by [Agile Pain Relief](https://agilepainrelief.com)

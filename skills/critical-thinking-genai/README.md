@@ -72,6 +72,6 @@ Critical Thinking is the work of Richard Paul and Linda Elder at the [Foundation
 The eleven probes here are an original adaptation of Critical Thinking for GenAI, by [Mark Levison](https://agilepainrelief.com). Paul and Elder's questions assume an author who can be walked back through their reasoning. This skill starts where that assumption stops holding, and is not a restatement of their framework.
 
 ## License
-CC BY-SA 4.0 - https://creativecommons.org/licenses/by-sa/4.0/
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - attribution terms in the [repository README](../../README.md#license).
 
 Created by [Agile Pain Relief](https://agilepainrelief.com)
