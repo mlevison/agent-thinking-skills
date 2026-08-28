@@ -122,6 +122,15 @@ when it's actually needed.
 ## GenAI Usage
 Claude is used to help me design the skills themselves and write the installation instructions. The core content remains human authored. *To the extent that Mark Levison remains human.*
 
+## Contributing
+Issues first, please, for ideas every bit as much as for bugs. It's the cheapest place to find out whether something fits, and it saves you writing a patch that was never going to land.
+
+The wording here is fussed over to a degree that is probably unreasonable, down to the pronouns. Changing a skill's text changes how the skill behaves, so it's worth a conversation before anyone spends an evening on it.
+
+Pull requests written by an agent won't be merged. A model helped draft plenty of what's here, so that's a fair thing to raise: the difference is that every line was argued with, cut and rewritten by someone who has to live with the result. 
+
+*The irony that this is the longest stretch of generated text in the repository has been noted.*
+
 ## License
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - full text in [LICENSE](LICENSE).
 
