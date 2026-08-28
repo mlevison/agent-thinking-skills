@@ -12,24 +12,29 @@ In addition, these skills are intended to flag potential weaknesses that are inh
 | [Critical Thinking](skills/critical-thinking/) | Claims, conclusions and decisions that need testing before you act. Paul and Elder's eight Elements of Reasoning and nine Intellectual Standards, asked as questions - starting from wherever your thinking already is. |
 | [Critical Thinking for GenAI](skills/critical-thinking-genai/) | Text a model produced, where walking the author back through the reasoning doesn't work because there was no route. Eleven probes that test the output instead of asking the author. |
 
-## What Using Them Looks Like
-**Systems Thinking - a problem that keeps coming back**
-A team hits the same production incident every few months and someone says "this keeps happening".
-Systems Thinking zooms out from the incident to the larger system it sits in, works backward to
-causes outside the team's immediate control, and draws a Causal Loop Diagram once enough
-interconnected variables are on the table.
+## What To Ask
+**Systems Thinking - causes upstream, consequences downstream**
+State the problem, or the plan
+- We solved this problem last quarter and it keeps coming back
+- Everyone sees a different cause for the same problem
+- We're considering bonuses for resolving client calls within five minutes
+- In three years we expect GenAI to do most of the work
 
-**Critical Thinking - testing a decision before acting on it**
-The user lays out their reasoning and says "poke holes in this". Critical Thinking establishes
-whose reasoning is under examination, then asks one Paul and Elder question at a time, starting
-from the part the conclusion actually rests on rather than working through a checklist.
+For more detail see: [Systems Thinking](https://agilepainrelief.com/glossary/systems-thinking/)
 
-**Critical Thinking for GenAI - checking something a model produced**
-The user pastes an answer from Claude or ChatGPT and asks "can I trust this?". The skill probes the
-output itself instead of asking the model to explain its reasoning, concentrates on where invented
-detail collects (anything niche, recent, local, or specific to the user's own scale, budget or
-jurisdiction), and closes by naming the claims that would collapse the answer if false, plus where
-to verify each one outside any model.
+**Critical Thinking - testing human reasoning and its implications**
+State the claim, or the decision
+- Adding another step in the review process will reduce the number of defects
+- I've decided to take a new job
+- My co-worker is getting under my skin and raising the problem will just make it worse
+- We selected a new supplier in ten minutes with no objections
+
+**Critical Thinking for GenAI - testing output that has no human reasoning**
+Share what the model generated
+- It quoted a statistic without a source
+- It summarised a sensitive meeting and agreed with claims people made in it
+- I asked two different LLMs and they agreed
+- It reviewed the contract and said "no flags"
 
 ## Roadmap
 - **Cynefin** - complexity/uncertainty classification, as an additional framework within Systems Thinking.
@@ -115,7 +120,7 @@ when it's actually needed.
 - 2026-08-24 - Added the Critical Thinking skill. Renamed and restructured the repo from "systems-thinking" to "agent-thinking-skills" to allow for more skills.
 
 ## GenAI Usage
-Claude is used to help me desgin the skills themselves and write the installation instructions. The core content remains human authored. *To the extent that Mark Levison remains human.*
+Claude is used to help me design the skills themselves and write the installation instructions. The core content remains human authored. *To the extent that Mark Levison remains human.*
 
 ## License
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - full text in [LICENSE](LICENSE).
