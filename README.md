@@ -67,15 +67,15 @@ The CLI reports anonymous install counts by default; `DO_NOT_TRACK=1` turns that
 Installs all three at once and keeps them current through `/plugin update`.
 
 ```
-/plugin marketplace add mlevison/agent-thinking-skills
-/plugin install thinking-skills@agile-pain-relief
+/plugin marketplace add mlevison/agile-pain-relief-skills
+/plugin install thinking-skills@agile-pain-relief-skills
 ```
 
-The first line registers the catalogue and installs nothing. The second does the installing.
-`agile-pain-relief` is the marketplace name rather than the repository name, so the two
-deliberately differ.
+The first line registers the catalogue and installs nothing. The second does the installing. [agile-pain-relief-skills](https://github.com/mlevison/agile-pain-relief-skills) is one marketplace for all of Agile Pain Relief's skills, so the same catalogue also offers [Refactoring Skills](https://github.com/mlevison/refactoring-skills) — add it once, install whichever plugins you want.
 
-To remove: `/plugin uninstall thinking-skills@agile-pain-relief`.
+To remove: `/plugin uninstall thinking-skills@agile-pain-relief-skills`.
+
+This repository used to be its own marketplace. If you installed that way, `/plugin uninstall thinking-skills@agile-pain-relief` and `/plugin marketplace remove agile-pain-relief` first.
 
 ### By hand
 Each skill is a self-contained directory under `skills/`. Copy the whole thing, `references/` and
@@ -103,8 +103,8 @@ already claimed the short name.
 ## Repository Layout
 ```
 .claude-plugin/
-  marketplace.json  # the catalogue /plugin marketplace add reads
-  plugin.json       # this repo as a single plugin
+  plugin.json       # this repo as a single plugin; the catalogue that
+                    # lists it is github.com/mlevison/agile-pain-relief-skills
 skills/
   <skill-name>/
     SKILL.md        # frontmatter + workflow; what Claude loads
@@ -116,6 +116,7 @@ skills/
 when it's actually needed.
 
 ## Updates
+- 2026-09-15 - New install command: the plugin is now listed in the shared [agile-pain-relief-skills](https://github.com/mlevison/agile-pain-relief-skills) marketplace.
 - 2026-08-26 - Split Critical Thinking for GenAI out of Critical Thinking into a skill you can invoke on its own.
 - 2026-08-24 - Added the Critical Thinking skill. Renamed and restructured the repo from "systems-thinking" to "agent-thinking-skills" to allow for more skills.
 
