@@ -58,13 +58,13 @@ Expect it to miss some. An instruction is not a guarantee, and a model has no re
 Use **[Critical Thinking](../critical-thinking/)** when the reasoning under examination is your own, and there is an author who can be walked back through it. Use **[Systems Thinking](../systems-thinking/)** when the problem keeps coming back and you need the structure holding it in place.
 
 ## What's In Here
-- `SKILL.md` - the workflow Claude follows
+- `SKILL.md` - the workflow the model follows
 - `references/probes.md` - the eleven probes, each with what it catches and what to do about it
 
 ## Installation
 See [Installing a Skill](../../README.md#installing-a-skill) in the repository README.
 
-In Claude Code, invoke it on demand with `/critical-thinking-genai`, or let Claude reach for it when one of the trigger phrases turns up.
+In Claude Code, invoke it on demand with `/critical-thinking-genai`, or let the model reach for it when one of the trigger phrases turns up.
 
 ## Credit
 Critical Thinking is the work of Richard Paul and Linda Elder at the [Foundation for Critical Thinking](https://www.criticalthinking.org).

@@ -1,6 +1,10 @@
 # Changelog
 Notable changes to this project, following [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.2.0] - 2026-10-07
+### Added
+- Evaporating Cloud skill: draws Goldratt's conflict cloud, surfaces the assumptions under each arrow, and tests an injection that meets both needs without a compromise.
+
 ## [0.1.0] - 2026-09-18
 ### Added
 - Systems Thinking skill: traces problems upstream, finds the feedback loops holding a situation in place, draws Causal Loop Diagrams.

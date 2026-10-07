@@ -1,8 +1,8 @@
 {
   "name": "thinking-skills",
   "displayName": "Agent Thinking Skills",
-  "version": "0.1.0",
-  "description": "Systems Thinking, Critical Thinking, and Critical Thinking for GenAI. Question-led skills that hand agency back to the person.",
+  "version": "0.2.0",
+  "description": "Systems Thinking, Critical Thinking, Critical Thinking for GenAI, and Evaporating Cloud. Question-led skills that hand agency back to the person.",
   "author": {
     "name": "Mark Levison",
     "url": "https://agilepainrelief.com"
@@ -15,6 +15,9 @@
     "systems-thinking",
     "reasoning",
     "evidence",
-    "facilitation"
+    "facilitation",
+    "evaporating-cloud",
+    "theory-of-constraints",
+    "conflict-resolution"
   ]
 }

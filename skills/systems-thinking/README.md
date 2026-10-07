@@ -73,14 +73,14 @@ Quick fixes feel productive. They're fast. They're visible. And they usually mak
 Systems Thinking takes longer. It means admitting you don't fully understand the situation yet. But it's how you find changes that actually stick.
 
 ## What's In Here
-- `SKILL.md` - the workflow Claude follows
+- `SKILL.md` - the workflow the model follows
 - `references/questions-of-a-systems-thinker.md` - the question set
 - `references/causal-loop-diagrams.md` - how to build and read a CLD
 
 ## Installation
 See [Installing a Skill](../../README.md#installing-a-skill) in the repository README.
 
-In Claude Code, invoke it on demand with `/systems-thinking`, or let Claude reach for it when one of the trigger phrases turns up.
+In Claude Code, invoke it on demand with `/systems-thinking`, or let the model reach for it when one of the trigger phrases turns up.
 
 ## License
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) - attribution terms in the [repository README](../../README.md#license).

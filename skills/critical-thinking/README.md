@@ -75,7 +75,7 @@ And it is told to hold any fact it contributes to the same accuracy standard as 
 Use **[Critical Thinking for GenAI](../critical-thinking-genai/)** when the text under examination came out of a model rather than out of you. Use **[Systems Thinking](../systems-thinking/)** when the problem keeps coming back and you want to understand why. Use this one when you have a claim, a conclusion or a decision and need to know whether it holds up. Critical Thinking and Systems Thinking overlap on assumptions and perspective, and running one after the other works well.
 
 ## What's in Here
-- `SKILL.md` - the workflow Claude follows
+- `SKILL.md` - the workflow the model follows
 - `references/entry-points.md` - the opening question and where each answer routes
 - `references/elements-of-reasoning.md` - the eight elements as questions
 - `references/intellectual-standards.md` - the nine standards, what each catches, and what failing it sounds like
@@ -83,7 +83,7 @@ Use **[Critical Thinking for GenAI](../critical-thinking-genai/)** when the text
 ## Installation
 See [Installing a Skill](../../README.md#installing-a-skill) in the repository README.
 
-In Claude Code, invoke it on demand with `/critical-thinking`, or let Claude reach for it when one of the trigger phrases turns up.
+In Claude Code, invoke it on demand with `/critical-thinking`, or let the model reach for it when one of the trigger phrases turns up.
 
 ## Credit
 The Elements of Reasoning and the Universal Intellectual Standards are the work of Richard Paul and Linda Elder at the [Foundation for Critical Thinking](https://www.criticalthinking.org). The questions here are one way of putting their framework to work in conversation.

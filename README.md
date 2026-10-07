@@ -11,6 +11,7 @@ In addition, these skills are intended to flag potential weaknesses that are inh
 | [Systems Thinking](skills/systems-thinking/) | Problems that keep coming back. Traces causes upstream, finds the feedback loops holding a situation in place, and draws Causal Loop Diagrams when the picture would help. |
 | [Critical Thinking](skills/critical-thinking/) | Claims, conclusions and decisions that need testing before you act. Paul and Elder's eight Elements of Reasoning and nine Intellectual Standards, asked as questions - starting from wherever your thinking already is. |
 | [Critical Thinking for GenAI](skills/critical-thinking-genai/) | Text a model produced, where walking the author back through the reasoning doesn't work because there was no route. Eleven probes that test the output instead of asking the author. |
+| [Evaporating Cloud](skills/evaporating-cloud/) | Two reasonable choices that conflict. Draws Goldratt's Evaporating Cloud to surface the assumptions behind each side. Probes for an action that meets both needs instead of splitting the difference. |
 
 ## What To Ask
 **Systems Thinking - causes upstream, consequences downstream**
@@ -36,6 +37,13 @@ Share what the model generated
 - I asked two different LLMs and they agreed
 - It reviewed the contract and said "no flags"
 
+**Evaporating Cloud - conflicts that end in compromise**
+State the two options, or the argument
+- Promote the new CEO from within, or hire from outside
+- Every planning session ends in the same fight over features versus technical debt
+- Part of me wants to save for a trip, part of me wants to eat out more
+- Two teams each need the same specialist full-time
+
 ## Roadmap
 - **Cynefin** - complexity/uncertainty classification, as an additional framework within Systems Thinking.
 - **Glossary** - domain vocabulary for the terms used across the skills, each linking to the APR glossary or a blog post for depth. For people reading the repo, not loaded at runtime.
@@ -55,7 +63,7 @@ Works with Claude Code, Codex, Cursor, OpenCode and around thirty other agents. 
 [skills.sh](https://skills.sh); this repository is the package.
 
 ```bash
-npx skills add mlevison/agent-thinking-skills                       # asks where to put them, offers all three
+npx skills add mlevison/agent-thinking-skills                       # asks where to put them, offers every skill
 npx skills add mlevison/agent-thinking-skills -g                    # personal, so every project has them
 npx skills add mlevison/agent-thinking-skills -s critical-thinking  # one skill only
 npx skills update                                                   # pull later versions
@@ -64,7 +72,7 @@ npx skills update                                                   # pull later
 The CLI reports anonymous install counts by default; `DO_NOT_TRACK=1` turns that off.
 
 ### Claude Code plugin
-Installs all three at once and keeps them current through `/plugin update`.
+Installs every skill at once and keeps them current through `/plugin update`.
 
 ```
 /plugin marketplace add mlevison/agile-pain-relief-skills
@@ -93,7 +101,7 @@ Anthropic's guide: https://support.claude.com/en/articles/12512180-using-skills-
 ## Invoking a Skill
 Two ways, and you get both by default:
 
-- **Type the slash command** - `/critical-thinking`, `/systems-thinking`, `/critical-thinking-genai`. In Claude Code a skill directory named `x` creates `/x`, so the directory name is the command.
+- **Type the slash command** - `/critical-thinking`, `/systems-thinking`, `/critical-thinking-genai`, `/evaporating-cloud`. In Claude Code a skill directory named `x` creates `/x`, so the directory name is the command.
 - **Say something that matches** - each skill lists its trigger phrases, and Claude reaches for the skill when one turns up.
 
 Installed as a plugin, each skill also answers to a namespaced command,
@@ -116,12 +124,13 @@ skills/
 when it's actually needed.
 
 ## Updates
+- 2026-10-07 - Added the Evaporating Cloud skill.
 - 2026-09-15 - New install command: the plugin is now listed in the shared [agile-pain-relief-skills](https://github.com/mlevison/agile-pain-relief-skills) marketplace.
 - 2026-08-26 - Split Critical Thinking for GenAI out of Critical Thinking into a skill you can invoke on its own.
 - 2026-08-24 - Added the Critical Thinking skill. Renamed and restructured the repo from "systems-thinking" to "agent-thinking-skills" to allow for more skills.
 
 ## GenAI Usage
-Claude is used to help me design the skills themselves and write the installation instructions. The core content remains human authored. *To the extent that Mark Levison remains human.*
+Claude helps me design the skills, drafts each `SKILL.md` and its `references/`, and wrote the installation instructions. The READMEs, the explanations written for people, are human authored. *To the extent that Mark Levison remains human.*
 
 ## Contributing
 Issues first, please, for ideas every bit as much as for bugs. It's the cheapest place to find out whether something fits, and it saves you writing a patch that was never going to land.
