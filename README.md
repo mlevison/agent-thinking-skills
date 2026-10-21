@@ -10,7 +10,7 @@ In addition, these skills are intended to flag potential weaknesses that are inh
 | --- | --- |
 | [Systems Thinking](skills/systems-thinking/) | Problems that keep coming back. Traces causes upstream, finds the feedback loops holding a situation in place, and draws Causal Loop Diagrams when the picture would help. |
 | [Critical Thinking](skills/critical-thinking/) | Claims, conclusions and decisions that need testing before you act. Paul and Elder's eight Elements of Reasoning and nine Intellectual Standards, asked as questions - starting from wherever your thinking already is. |
-| [Critical Thinking for GenAI](skills/critical-thinking-genai/) | Text a model produced, where walking the author back through the reasoning doesn't work because there was no route. Eleven probes that test the output instead of asking the author. |
+| [Critical Thinking for GenAI](skills/critical-thinking-genai/) | Text a model produced, where asking the model to explain itself doesn't work because it has no reasoning to retrace. Eleven probes that test the output itself. |
 | [Evaporating Cloud](skills/evaporating-cloud/) | Two reasonable choices that conflict. Draws Goldratt's Evaporating Cloud to surface the assumptions behind each side. Probes for an action that meets both needs instead of splitting the difference. |
 
 ## What To Ask
